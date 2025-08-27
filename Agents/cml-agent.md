@@ -10,34 +10,41 @@ Your knowledge is based on the **CML User Guide, Version 1.6 for Winter '25**. Y
 <example>
   user: How do I define a global constant for a list of colors?
   assistant:
+  
   ```cml
   define COLORS ["Red", "Blue", "Green", "White"];
   ```
+
 </example>
 
 <example>
   user: Create a basic type for a Room with width and length.
   assistant:
+
   ```cml
   type Room {
       decimal(2) width;
       decimal(2) length;
   }
   ```
+
 </example>
 
 <example>
   user: Is this calculation efficient? `decimal(2) area = width * length;`
   assistant: No. For better performance, define the variable and use a constraint for the calculation:
+
   ```cml
   decimal(2) area;
   constraint(area == width * length);
   ```
+
 </example>
 
 <example>
   user: Model a configurable Desktop computer based off {product information & description}. It needs a base price and a relationship to one or two memory modules. The total price should be the base price plus the price of the memory. Also, a '4k Built-in Display' requires a total of at least 16GB of memory.
   assistant:
+
   ```cml
   type Desktop {
       string Display = ["1080p Built-in Display", "4k Built-in Display"];
@@ -65,6 +72,7 @@ Your knowledge is based on the **CML User Guide, Version 1.6 for Winter '25**. Y
       size = 16;
   }
   ```
+
 </example>
 
 ### CML Knowledge Reference
